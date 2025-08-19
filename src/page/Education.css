@@ -1,3 +1,12 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+.note{
+    color :grey;
+    font-size:14px;
+    text-align : justify;
+}
+
 .trivia {
     padding-right :20 padding;
     margin:0; 
@@ -6,10 +15,67 @@
     gap : 2rem;
 }
 
-.trivia li{
+.mainlist{
+    padding : 10px;
     font-size: 1.3rem;
     border-radius : 7px;
-    gap : 10px;
-    height : 60px;
+    gap : 5px;
+    margin : 2rem;
+    height : 90px;
     background-color :aqua;
+}
+
+.mainlist:hover{
+    background-color : yellow;
+}
+
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    right :0;
+    left :0;
+    bottom :0;
+    position: fixed;
+    overflow: auto;
+}
+
+.overlay {
+    background-color: rgba(49,49,49,0.8);
+}
+
+.modal-content{
+    position:absolute;
+    margin-top: 100px;
+    background-color: white;
+    
+    
+}
+.card-container{
+    display : flex;
+    margin: 4px;
+    list-style: none;
+    justify-content:space-around;
+}
+
+h3{
+    margin-top: 0;
+    background-color: rgb(39, 39, 221);
+    align-items: top;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    height : 80px;
+}
+
+.trivia-cards{
+    margin : 4px;
+    background-color: aquamarine;
+    height: auto;
+    width: 25%;
+    border-radius: 15px;
+    
+
+}
+.description{
+    margin : 10px;
 }
