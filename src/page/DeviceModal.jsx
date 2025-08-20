@@ -18,7 +18,7 @@ export default function DeviceModal({ device, onClose }) {
 
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal-content" onClick={handleContentClick}>
+      <div className="modal-content-data" onClick={handleContentClick}>
         <button className="close-button" onClick={onClose}>×</button>
         <h2 className="device-name">{device.location}</h2>
         <ul>

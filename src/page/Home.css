@@ -1,0 +1,34 @@
+.home-top{
+    padding-top: 60px;
+    height: 600px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #49C6FB,  #EAF8FE);
+    padding-top: 200px;
+}
+.logo-h1{
+    
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+.home-logo{
+    width : 20%;
+    height: auto;
+}
+
+.shortcut-container{
+    margin-top: 50px;
+    display : flex;
+    
+    list-style: none;
+    justify-content:space-around;
+    font-size: 30px;
+}
+.shortcut-card{
+    background-color: #FFF4F4;
+    width :40%;
+    height: 200px;
+    text-align: center;
+    padding-top: 60px;
+
+}

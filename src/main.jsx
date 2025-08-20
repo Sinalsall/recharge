@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import './page/Education.css'
 import './page/RealTimeData.css'; 
+import './page/Home.css'; 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
