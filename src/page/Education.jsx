@@ -14,7 +14,12 @@ export default function Education(){
         setModal3(!modal3);
     }
 
-    if(modal1 || modal2 || modal3) {
+    const [modal4,setModal4] = useState(false) ;
+    const toggleModal4 = () =>{
+        setModal4(!modal4);
+    }
+
+    if(modal1 || modal2 || modal3 || modal4) {
     document.body.classList.add('active-modal')
     } else {
     document.body.classList.remove('active-modal')
@@ -289,7 +294,7 @@ export default function Education(){
                 </div>
                 )}
             </li>
-            <li className='mainlist'>
+            <li className='mainlist' onClick={toggleModal4}>
                 Injection Wells 101 — A Straw That Pushes Water Down (Safely)
                 <p className="note">When land is tight or targets are deep, injection wells deliver clean water right where it's needed—down in the aquifer.</p>
             </li>
