@@ -101,6 +101,7 @@ h2 {
 .map-button-holder{
   margin-top: 80px;
   list-style: none;
+  display :flex;
 }
 
 .map-toggle{
@@ -110,4 +111,8 @@ h2 {
 
 .map-toggle:hover {
   background-color: yellow;
+}
+
+.map-li{
+  margin : 20px;
 }

@@ -4,7 +4,17 @@ export default function Education(){
     const toggleModal1 = () =>{
         setModal(!modal1);
     }
-    if(modal1) {
+    const [modal2,setModal2] = useState(false) ;
+    const toggleModal2 = () =>{
+        setModal2(!modal2);
+    }
+
+    const [modal3,setModal3] = useState(false) ;
+    const toggleModal3 = () =>{
+        setModal3(!modal3);
+    }
+
+    if(modal1 || modal2 || modal3) {
     document.body.classList.add('active-modal')
     } else {
     document.body.classList.remove('active-modal')
@@ -96,13 +106,188 @@ export default function Education(){
                 </div>
                 )}
             </li>
-            <li className='mainlist'>
+            <li className='mainlist'  onClick={toggleModal2}>
                 Aquifers 101 — Sponges vs. Bricks Underground
                 <p className="note">Not all underground layers are equal. Some behave like sponges, letting water in and out easily. Others are stubborn bricks. Knowing the difference tells you where wells actually work.</p>
+                {modal2 && (
+                <div className='modal'>
+                    <div className='overlay' onClick={toggleModal2}></div>
+                    <div className='modal-content'>
+                        <ul className="card-container">
+                            <li className='trivia-cards'>
+                                <h3>1  Meet the Layers</h3>
+                                <p className="description">
+                                    <ul>
+                                        <li>
+                                            Aquifer: Stores and transmits water well (sand, gravel, some fractured rocks). Wells in good aquifers produce steady flows.
+                                        </li>
+                                        <li>
+                                            Aquitard: Has storage but slows water (silt, clay). It can protect deeper aquifers from quick contamination.
+                                        </li>
+                                        <li>
+                                            Aquiclude: Effectively blocks flow (very tight clay or unfractured rock), acting like a barrier.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li className='trivia-cards'>
+                                <h3>2 Porosity vs. Permeability (Space vs. Shortcuts)</h3>
+                                <p className='description'>
+                                    Porosity = how much empty space a material has; permeability = how connected those spaces are. Clay can have high porosity (lots of tiny pores) but extremely low permeability (pores aren’t well connected), so water barely moves. Well-sorted sands and gravels have both: plenty of space and many connected pathways.
+                                </p>
+                            </li> 
+                            <li className='trivia-cards'>
+                                <h3>3 Unconfined vs. Confined</h3>
+                                <p className="description">
+                                    <ul>
+                                        <li>
+                                            Unconfined aquifer: Its top is the water table. It recharges relatively quickly from the surface and is more vulnerable to surface contamination.
+                                        </li>
+                                        <li>
+                                            Confined aquifer: Sits below a tighter layer (confining layer). It often has pressure, drill a well and the water level can rise above the aquifer top (sometimes above ground = artesian flow). Recharge usually happens where the aquifer is exposed at the surface, which may be far away.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>4 Quality, Yield, and Protection</h3>
+                                <p className='description'>
+                                    Unconfined aquifers are easier to refill but can pick up pollutants faster. Confined aquifers are better protected but might be deeper and slower to recharge. The “best” aquifer depends on your goal: high-yield wells, fast recharge, or long-term protection.
+                                </p>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>
+                                    5 Why Type Matters for Projects
+                                </h3>
+                                <p className='description'>
+                                    Planning wells or recharge? Aquifer type sets expectations for well yield, recharge rates, monitoring needs, and risk. The smarter the match between project and aquifer, the cheaper and safer the outcome.
+                                </p>
+                            </li>
+                            
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>Key Terms</h3>
+                                <ul>
+                                    <li>Aquifer</li>
+                                    <li>Aquitard</li>
+                                    <li>Aquiclude</li>
+                                    <li>Porosity</li>
+                                    <li>Permeability</li>
+                                    <li>Confined</li>
+                                    <li>Unconfined</li>
+                                    <li>Artesian</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                )}
             </li>
-            <li className='mainlist'>
+            <li className='mainlist' onClick={toggleModal3}>
                 Recharge 101 — Refilling the Underground Bank
                 <p className="note">Think of an aquifer like a savings account. Recharge is the deposit. If withdrawals beat deposits, wells drop, land can sink, and rivers run low.</p>
+                {modal3 && (
+                <div className='modal'>
+                    <div className='overlay' onClick={toggleModal3}></div>
+                    <div className='modal-content'>
+                        <ul className="card-container">
+                            <li className='trivia-cards'>
+                                <h3>1  What Recharge Really Is</h3>
+                                <p className="description">Recharge is water returning to the aquifer—first by infiltration through soil, then percolation to the saturated zone. Nature does this after storms; we can boost it with simple designs that slow water and let it soak in.
+                                </p>
+                            </li>
+                            <li className='trivia-cards'>
+                                <h3>2 Natural vs. Managed Recharge</h3>
+                                <p className='description'>
+                                    <ul>
+                                        <li>
+                                            Natural recharge: Unpaved, vegetated land allows rain to soak in. Riverbeds can also leak water into underlying aquifers.
+                                        </li>
+                                        <li>
+                                            Managed Aquifer Recharge (MAR): We intentionally add clean water using infiltration basins, trenches/swales, or wells. MAR turns stormwater from a flooding problem into a water resource.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li> 
+                            <li className='trivia-cards'>
+                                <h3>3 Where Recharge Works Best</h3>
+                                <p className="description">Success depends on permeable soils, a suitable aquifer depth, and clean source water. Sites should be away from pollution sources (e.g., septic fields, certain industries). Good design checks infiltration rates (how fast water soaks), potential mounding (temporary water-table rise), and travel time to any drinking-water wells.
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>4 Why Do It (The Payoff)</h3>
+                                <p className='description'>
+                                    <ul>
+                                        <li>
+                                            Drought buffer: Store wet-season water for dry seasons.
+                                        </li>
+                                        <li>
+                                            Urban flood relief: Spread storm peaks by holding and soaking water locally.
+                                        </li>
+                                        <li>
+                                            Subsidence control: Maintain underground water pressure so the ground doesn’t compact.
+                                        </li>
+                                        <li>
+                                            Coastal shield: Create a freshwater barrier that helps keep seawater out.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>
+                                    5 The Golden Rule: Good In = Good Out
+                                </h3>
+                                <p className='description'>
+                                   Recharge only works long-term if the input water is clean enough. Sediment clogs pores; microbes and chemicals risk health. Pretreatment (settling, filtration, maybe disinfection) keeps systems working and aquifers safe.
+                                </p>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>
+                                    6 Safeguards & Community
+                                </h3>
+                                <p className='description'>
+                                    Use monitoring wells to track water levels and quality. Share data with the community, MAR is strongest when people can see and trust the results.
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>Key Terms</h3>
+                                <ul>
+                                    <li>Recharge</li>
+                                    <li>MAR</li>
+                                    <li>Infiltration basin</li>
+                                    <li>Mounding</li>
+                                    <li>Percolation</li>
+                                    <li>Travel time</li>
+                                    <li>Saltwater intrusion</li>
+                                    <li>Subsidence</li>
+                                </ul>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>Fun Facts</h3>
+                                <ul>
+                                <li>
+                                    Many historic cities used seasonal ponds/canals that accidentally performed MAR.
+                                    </li>
+                                <li>
+                                    Turning stormwater into recharge can cut flood risk and reduce imported water needs.
+                                </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                )}
             </li>
             <li className='mainlist'>
                 Injection Wells 101 — A Straw That Pushes Water Down (Safely)
