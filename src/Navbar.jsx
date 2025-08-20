@@ -5,11 +5,11 @@ export default function Navbar(){
         <img src="src\assets\logo recharge.png" width="80" height="auto"/>
         <ul>
             <li> <CustomLink to="/">Home</CustomLink> </li>
-            <li> <CustomLink to ="/info">Basic Information</CustomLink> </li>
+            <li> <CustomLink to ="/info">How We Help</CustomLink> </li>
             <li> <CustomLink to="/education">Recharge Trivia</CustomLink> </li>
             <li> <CustomLink to="/map">Interactive map</CustomLink></li>
-            <li> <CustomLink to="/sumur">Data Real Time</CustomLink> </li> 
-            <li> <CustomLink to="/calculator">Calculator</CustomLink></li>
+            <li> <CustomLink to="/sumur">Real Time Data</CustomLink> </li> 
+           
         </ul>
     </nav>)
 }

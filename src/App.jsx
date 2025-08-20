@@ -6,8 +6,8 @@ import { Route, Routes } from 'react-router-dom'
 
 import Home from "./page/Home"
 import Information from "./page/Information"
-import Calculator from './page/Calculator'
-import Education from './Page/Education'
+
+import Education from './page/Education'
 import InteractiveMap from './page/InteractiveMap'
 import RealTimeDataSumur from './page/RealTimeData'
 
@@ -23,7 +23,7 @@ function App() {
                 <Route path="/education" element={<Education/>}/>
                 <Route path="/map" element={<InteractiveMap/>}/>
                 <Route path="/sumur" element={<RealTimeDataSumur/>}/>
-                <Route path="/calculator" element={<Calculator/>}/>
+                
             </Routes>
         </div>
     </>

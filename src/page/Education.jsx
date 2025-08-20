@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+
 export default function Education(){
     const [modal1,setModal] = useState(false) ;
     const toggleModal1 = () =>{
@@ -19,7 +20,12 @@ export default function Education(){
         setModal4(!modal4);
     }
 
-    if(modal1 || modal2 || modal3 || modal4) {
+    const [modal5,setModal5] = useState(false) ;
+    const toggleModal5 = () =>{
+        setModal5(!modal5);
+    }
+
+    if(modal1 || modal2 || modal3 || modal4 || modal5) {
     document.body.classList.add('active-modal')
     } else {
     document.body.classList.remove('active-modal')
@@ -34,7 +40,7 @@ export default function Education(){
                 <p className="note"> There's a hidden water world beneath streets and rice fields. Not big caves, just tiny spaces in soil and rock storing the water that keeps taps running when the rain stops.</p>
 
                 {modal1 && (
-                <div className='modal'>
+                <div className='modal-trivia'>
                     <div className='overlay' onClick={toggleModal1}></div>
                     <div className='modal-content'>
                         <ul className="card-container">
@@ -115,7 +121,7 @@ export default function Education(){
                 Aquifers 101 — Sponges vs. Bricks Underground
                 <p className="note">Not all underground layers are equal. Some behave like sponges, letting water in and out easily. Others are stubborn bricks. Knowing the difference tells you where wells actually work.</p>
                 {modal2 && (
-                <div className='modal'>
+                <div className='modal-trivia'>
                     <div className='overlay' onClick={toggleModal2}></div>
                     <div className='modal-content'>
                         <ul className="card-container">
@@ -197,7 +203,7 @@ export default function Education(){
                 Recharge 101 — Refilling the Underground Bank
                 <p className="note">Think of an aquifer like a savings account. Recharge is the deposit. If withdrawals beat deposits, wells drop, land can sink, and rivers run low.</p>
                 {modal3 && (
-                <div className='modal'>
+                <div className='modal-trivia'>
                     <div className='overlay' onClick={toggleModal3}></div>
                     <div className='modal-content'>
                         <ul className="card-container">
@@ -297,10 +303,199 @@ export default function Education(){
             <li className='mainlist' onClick={toggleModal4}>
                 Injection Wells 101 — A Straw That Pushes Water Down (Safely)
                 <p className="note">When land is tight or targets are deep, injection wells deliver clean water right where it's needed—down in the aquifer.</p>
+                {modal4 && (
+                <div className='modal-trivia'>
+                    <div className='overlay' onClick={toggleModal4}></div>
+                    <div className='modal-content'>
+                        <ul className="card-container">
+                            <li className='trivia-cards'>
+                                <h3>1  What an Injection Well Does</h3>
+                                <p className="description">
+                                  Instead of waiting for water to infiltrate from the surface, an injection well places pre-treated water directly into the selected aquifer layer. Cities use them for Managed Aquifer Recharge, coastal barriers, or compact pilot projects where basins won’t fit.
+                                </p>
+                            </li>
+                            <li className='trivia-cards'>
+                                <h3>2 Anatomy</h3>
+                                <p className='description'>
+                                    <ul>
+                                        <li>
+                                            Headworks: Pipe inlet, flow meter, pressure gauge, and a control valve—the “dashboard” for operators.
+                                        </li>
+                                        <li>
+                                            Casing & Screen: The strong pipe (casing) holds the well open; the screened interval sits inside the aquifer to spread flow and keep particles out (often with a gravel pack for uniform flow).
+                                        </li>
+                                        <li>
+                                            Seals & Grout: These prevent short-cuts between layers so water only enters the target zone. A sanitary seal near the surface blocks surface contaminants.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li> 
+                            <li className='trivia-cards'>
+                                <h3>3  Pretreatment & Flow Control</h3>
+                                <p className="description">Clogging starts with sediment and can be fueled by microbes or chemistry (like scale). Use screening/filtration, disinfection if needed, and check pH. Start injections at gentle flows, then step up while watching pressure—a rising pressure at the same flow is an early warning.
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>4 Operating Smart</h3>
+                                <p className='description'>
+                                    Create a routine: Daily log flow and pressure; weekly measure water levels in a nearby monitoring well; monthly check basic water quality. Build simple rules like “If pressure rises X% at the same flow, schedule a backwash/flush or pause and improve pretreatment.”
+                                </p>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>
+                                    5 Risks & Fixes
+                                </h3>
+                                <p className='description'>
+                                    <ul>
+                                        <li>
+                                            Clogging (physical/biological/chemical): Filter better, reduce flow, or surge/backwash.
+                                        </li>
+                                        <li>
+                                            Short-circuiting: Poor seals or damaged casing let water leak to the wrong layer—fix construction and grouting.
+                                        </li>
+                                        <li>
+                                            Quality drift: If input water slips out of spec, stop, correct, retest, then resume.
+                                        </li>
+                                        <li>
+                                            Over-pressuring: Stay well below formation fracture pressure; injection should place water, not break the formation.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>
+                                    6 Where They Shine
+                                </h3>
+                                <p className='description'>
+                                    Dense cities, coastal barriers, emergency drought storage, and pilot demos (fast install, small footprint) all favor injection wells—especially when paired with transparent monitoring dashboards that build public trust.
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>Key Terms</h3>
+                                <ul>
+                                    <li>Injection well</li>
+                                    <li>Screened interval</li>
+                                    <li>Injection pressure</li>
+                                    <li>Gravel pack</li>
+                                    <li>Backwash/Surging</li>
+                                    <li>Monitoring well</li>
+                                    <li>Grouting</li>
+                                    <li>Sanitary seal</li>
+                                </ul>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>Fun Facts</h3>
+                                <ul>
+                                <li>
+                                    Lines of injection wells along a coast can act like a freshwater shield against seawater intrusion
+                                    </li>
+                                <li>
+                                    Clear headwork tubes let operators literally see bubbles or trapped air during startup checks
+                                </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                )}
             </li>
-            <li className='mainlist'>
+            <li className='mainlist' onClick={toggleModal5}>
                 Water Quality 101 — Only Good Water In = Good Water Out
                 <p className="note"> If you wouldn't drink it, don't inject it. Aquifers are precious storage, not trash cans. Clean inputs protect wells, equipment, and public health.</p>
+                {modal5 && (
+                <div className='modal-trivia'>
+                    <div className='overlay' onClick={toggleModal5}></div>
+                    <div className='modal-content'>
+                        <ul className="card-container">
+                            <li className='trivia-cards'>
+                                <h3>1  The Big Six (and why they matter)</h3>
+                                <p className="description">
+                                  <li>
+                                    TSS / Turbidity: Suspended particles are clogging enemy #1—they coat screens and block pores.
+                                  </li>
+                                  <li>
+                                    pH: Extreme pH can dissolve minerals (releasing metals) or precipitate scale (again, clogging). Aim near neutral unless your aquifer chemistry says otherwise.
+                                  </li>
+                                  <li>
+                                    EC/Salinity: Electrical conductivity tracks dissolved salts. In coasts, rising EC over time can hint at saltwater intrusion.
+                                  </li>
+                                  <li>
+                                    Nitrate: High levels can feed biofilms (bio-clogging) and pose health risks.    
+                                  </li>
+                                  <li>
+                                    Microbes: Pathogens and biofilm-formers must be controlled—disinfect or ensure safe residence times.
+                                  </li>
+                                  <li>
+                                    Temperature (optional): Big differences change viscosity and reaction rates; gentler temperature differences are kinder to the formation.
+                                  </li>
+                                </p>
+                            </li>
+                            <li className='trivia-cards'>
+                                <h3>2 Pretreatment That Works</h3>
+                                <p className='description'>
+                                    Choose the simplest train that meets targets: screening (remove big debris) → settling (let heavier particles drop) → filtration (sand/dual-media/cartridge). Add disinfection (chlorine/UV) if microbes matter; adjust pH to avoid corrosion or scale. Better pretreatment = fewer shutdowns later.
+                                </p>
+                            </li> 
+                            <li className='trivia-cards'>
+                                <h3>3  Go/No-Go Decisions</h3>
+                                <p className="description">
+                                    Before each run, compare test results with your site limits (turbidity, pH, EC, nitrate, microbes). If any parameter is out of range: No-Go. Fix pretreatment, retest, then proceed.
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>4 Record, Trend, Improve</h3>
+                                <p className='description'>
+                                    Log every test and operating value (flow, pressure). Look for trends—e.g., slowly rising pressure at the same flow = early clogging signal. Early action (filter swap, backwash) prevents bigger downtime.
+                                </p>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>
+                                    5 Coastal Caution
+                                </h3>
+                                <p className='description'>
+                                    In coastal aquifers, watch EC and chloride. The goal is to stiffen the freshwater front—not push saltier water into storage. Small upward trends deserve attention.
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <ul className='card-container'>
+                            <li className="trivia-cards">
+                                <h3>Key Terms</h3>
+                                <ul>
+                                    <li>TSS</li>
+                                    <li>Turbidity</li>
+                                    <li>EC</li>
+                                    <li>Pretreatment</li>
+                                    <li>Disinfection;</li>
+                                    <li>Go/No-Go limit</li>
+                                    <li>Biofouling</li>
+                                    <li>Scale</li>
+                                </ul>
+                            </li>
+                            <li className="trivia-cards">
+                                <h3>Fun Facts</h3>
+                                <ul>
+                                <li>
+                                    “Crystal clear” water can still be unsafe—many microbes are invisible.
+                                    </li>
+                                <li>
+                                    A tiny, steady rise in EC can warn of saltwater intrusion long before anyone tastes salt.
+                                </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                )}
             </li>
         </ul>
         </>
