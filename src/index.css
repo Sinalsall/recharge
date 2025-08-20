@@ -97,3 +97,17 @@ h2 {
   width :100vw;
   margin-left: 20px;
 }
+
+.map-button-holder{
+  margin-top: 80px;
+  list-style: none;
+}
+
+.map-toggle{
+  border-radius: 5px;
+  background-color: aqua;
+}
+
+.map-toggle:hover {
+  background-color: yellow;
+}
